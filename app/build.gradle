@@ -3,19 +3,24 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('C:\\Users\\m\\AndroidStudioProjects\\WeFake\\app\\release\\app-release.apk')
-            keyAlias 'key'
-            keyPassword '000000'
-        }
-    }
-    compileSdk 32
+//    signingConfigs {
+//        release {
+//            storeFile file('C:\\Users\\m\\AndroidStudioProjects\\WeFake\\app\\release\\app-release.apk')
+//            keyAlias 'key'
+//            keyPassword '000000'
+//        }
+//    }
+    compileSdk 35
 
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
     defaultConfig {
+        namespace "com.github.qcute.wefake"
         applicationId "com.github.qcute.wefake"
-        minSdk 28
-        targetSdk 32
+        minSdk 26
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -30,8 +35,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
